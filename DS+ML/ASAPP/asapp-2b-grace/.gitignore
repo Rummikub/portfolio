@@ -1,0 +1,6 @@
+data
+.DS_Store
+finetuning/distilgpt2-finetuned
+finetuning/distilgpt2-finetuned-withaction-ABCD
+finetuning/gpt2-medium-finetuned-withaction-ABCD
+finetuning/gpt2-medium-finetuned-noaction-ABCD
