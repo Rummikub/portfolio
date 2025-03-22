@@ -13,5 +13,5 @@ statistical analysis, business intelligence project and data visualization proje
 natural language process, large language models, classification, regression and data science challenges
 
 - AD : anomaly detection model for cybersecurity
-- EY : (WIP) EY data challenge
-- NYBG : image classification of botanical large dataset as part of Kaggle competition collaborated with BTT
+- EY : spatial regression model for prediction urban heat island index in NYC Manhattan and Bronx with EY Data Challenge
+- NYBG : image classification of botanical large dataset as part of Kaggle competition collaborated with Break Through Tech AI x New York Botanical Garden Kaggle data competition
