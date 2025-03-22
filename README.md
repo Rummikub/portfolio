@@ -6,7 +6,7 @@ statistical analysis, business intelligence project and data visualization proje
 
 - IMDB : (WIP) movie trend analysis and data visualization based on IMDB Kaggle project
 - GIS : (WIP) GIS data analysis project regarding NYC taxi dataset
-- TikTok : (WIP)
+- TikTok : (WIP) Business Intelligence Data Analysis Project 
 
 **DS+ML**
 : This folder is for the projects related but not limited to machine learning,
