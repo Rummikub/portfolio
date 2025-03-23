@@ -1,0 +1,6 @@
+The 2025 AI & data challenge is focused on a phenomenon known as the urban heat island effect, a situation that occurs due to the high density of buildings and lack of green space and water bodies in urban areas. Temperature variations between rural and urban environments can exceed 10-degrees Celsius in some cases and cause significant health-, social- and energy-related issues. Those particularly vulnerable to heat-related problems include young children, older adults, outdoor workers, and low-income populations.
+
+The goal of the challenge is to develop a machine learning model to predict heat island hotspots in an urban location. Additionally, the model should be designed to discern and highlight the key factors that contribute significantly to the development of these hotspots within city environments.
+
+
+Data will be used to build machine learning models to forecast temperatures at micro-scales (meters) across a city. Models will be tested against known temperatures at specific locations to determine an overall accuracy (least-squares error). In addition, participants will be asked to submit a short document describing their analysis approach and address scaling such solutions to other cities, additional datasets that could improve model accuracy, socioeconomic impact, and practical application for local decision makers.
