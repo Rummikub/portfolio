@@ -1,4 +1,3 @@
-This is created and written by Bianca Yeseo Kim.
 
 **DA+BI**
 : This folder is for the projects related but not limited to data analysis, 
