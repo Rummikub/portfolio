@@ -6,7 +6,6 @@ This portfolio highlights projects across machine learning, data engineering, co
 ** All scripts are generated from Bianca Yeseo Kim and all datasets in this project are either public or synthetic, generated to simulate real-world behavior to prevent exposing proprietary data.
 
 
----
 
 ## > Projects
 
@@ -50,7 +49,7 @@ Spatial regression model using NYC land temperature and zoning data to predict u
 **Botanical Image Classification**  
 Computer vision project from Kaggle x Break Through Tech AI x NY Botanical Garden competition. Trained CNNs on a large botanical species image set.
 
----
+
 
 ##  > Tools & Tech Stack
 - **ML/DL**: Scikit-learn, PyTorch, TensorFlow, PyCaret, XGBoost
@@ -60,8 +59,8 @@ Computer vision project from Kaggle x Break Through Tech AI x NY Botanical Garde
 - **GenAI / NLP**: HuggingFace Transformers, OpenAI, LangChain
 - **Orchestration**: Airflow, Prefect, CI/CD workflows
 
----
 
-## 📬 Contact
+
+## > Contact
 Made by Bianca Yeseo Kim 
 *LinkedIn* ([https://linkedin.com/in/yeseobiancakim]) | *Portfolio* ([https://rummikub.github.io/portfolio])
