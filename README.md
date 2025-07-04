@@ -1,4 +1,4 @@
-/Bianca's Portfolio Overview/ 
+# Portfolio Overview
 
 This portfolio highlights projects across machine learning, data engineering, computer vision, cybersecurity, and generative AI. It includes public datasets, Kaggle challenges, simulations, and real-world use cases — all designed to reflect practical, production-quality work.
 
