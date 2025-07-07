@@ -13,11 +13,11 @@ This portfolio highlights projects across machine learning, data engineering, co
 **User Behavior Based Product**  
 Modular analytics and ML pipelines simulating user behavior across entertainment, fitness, music, and ride-sharing platforms. Includes mood classification, trip prediction, churn modeling, and content recommendations.
 
-###  **PulseAI**  (WIP)
+###  **PulseAI** 
 **Real-Time Behavioral Intelligence Engine**  
 Streaming pipeline for real-time session modeling, churn detection, and intelligent API delivery across digital services.
 
-###  **MobilityAI**  (WIP)
+###  **MobilityAI**
 **Ridership Intelligence**  
 Geospatial clustering and trip prediction using NYC taxi data, built to model surge pricing and demand-supply imbalance.
 
