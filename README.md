@@ -25,7 +25,7 @@ Geospatial clustering and trip prediction using NYC taxi data, built to model su
 **Fitness + Wearable Simulation**  
 Behavioral engagement and churn analytics platform simulating wearable fitness logs and personalized class recommendations.
 
-###  **BioSec**  (WIP)
+###  **BioSec**  
 **Biotech Security / Insider Threats**  
 Inspired by real cybersecurity experience, this project simulates access logs and insider threats in bioinformatics infrastructure using LSTM anomaly detection and PyCaret.
 
