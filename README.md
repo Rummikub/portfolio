@@ -4,7 +4,7 @@ Welcome! This portfolio showcases real-world projects across **machine learning*
 
 Each project demonstrates applied experience in developing end-to-end solutions—ranging from model development to deployment and data orchestration.
 
-> 🛠️ All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist and ML Engineer based in NYC.
+🛠️ All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist and ML Engineer based in NYC.
 
 
 
@@ -35,7 +35,6 @@ Churn modeling and engagement simulation using wearable fitness data. Recommende
 Inspired by real cybersecurity work. This project simulates internal access logs, using **LSTM-based anomaly detection** to flag credential misuse in bioinformatics systems.  
 *Tech stack:* TensorFlow (LSTM), PyCaret, OpenShift, AWS
 
----
 
 ### 🔐 AD (WIP) – Enterprise Anomaly Detection  
 A framework combining **supervised** and **unsupervised ensemble models** for cybersecurity event classification in enterprise infrastructure.  
