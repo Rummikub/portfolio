@@ -1,66 +1,93 @@
-# Portfolio Overview
+# Bianca Yeseo Kim – MLSE Portfolio
 
-This portfolio highlights projects across machine learning, data engineering, computer vision, cybersecurity, and generative AI. It includes public datasets, Kaggle challenges, simulations, and real-world use cases — all designed to reflect practical, production-quality work.
+Welcome! This portfolio showcases real-world projects across **machine learning**, **data engineering**, **computer vision**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
 
+Each project demonstrates applied experience in developing end-to-end solutions—ranging from model development to deployment and data orchestration.
 
-** All scripts are generated from Bianca Yeseo Kim and all datasets in this project are either public or synthetic, generated to simulate real-world behavior to prevent exposing proprietary data.
+> 🛠️ All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist and ML Engineer based in NYC.
 
+---
 
+## 🔍 Projects Overview
 
-## > Projects
+### 🧠 SmartStream – User Behavior Modeling Platform  
+A modular ML platform simulating user behavior across **entertainment**, **fitness**, **music**, and **ride-sharing** apps.  
+Features mood classification, churn modeling, trip prediction, and content recommendations.  
+*Tech stack:* Spark, Airflow, PyCaret, GCP, Tableau
 
-###  **SmartStream**  
-**User Behavior Based Product**  
-Modular analytics and ML pipelines simulating user behavior across entertainment, fitness, music, and ride-sharing platforms. Includes mood classification, trip prediction, churn modeling, and content recommendations.
+---
 
-###  **PulseAI** 
-**Real-Time Behavioral Intelligence Engine**  
-Streaming pipeline for real-time session modeling, churn detection, and intelligent API delivery across digital services.
+### ⚡ PulseAI – Real-Time Behavioral Intelligence Engine  
+Streaming pipeline for **session modeling**, **churn detection**, and **real-time API delivery** across multiple digital services.  
+*Tech stack:* Spark Structured Streaming, Airflow, Streamlit
 
-###  **MobilityAI**
-**Ridership Intelligence**  
-Geospatial clustering and trip prediction using NYC taxi data, built to model surge pricing and demand-supply imbalance.
+---
 
-###  **SyncFit**  (WIP)
-**Fitness + Wearable Simulation**  
-Behavioral engagement and churn analytics platform simulating wearable fitness logs and personalized class recommendations.
+### 🚕 MobilityAI – Ridership Intelligence with NYC Taxi Data  
+Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore **surge pricing prediction** and **geo-temporal user behavior**.  
+*Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck
 
-###  **BioSec**  
-**Biotech Security / Insider Threats**  
-Inspired by real cybersecurity experience, this project simulates access logs and insider threats in bioinformatics infrastructure using LSTM anomaly detection and PyCaret.
+---
 
-###  **AD**  (WIP)
-**Anomaly Detection for Cybersecurity**  
-Built on ensemble learning and supervised/ unsupervised models for anomaly classification in enterprise-level event logs.
+### 🏋️ SyncFit (WIP) – Fitness + Wearable Engagement Analytics  
+Churn modeling and engagement simulation using wearable fitness data. Recommender systems for class suggestions and personalized fitness routines.  
+*Tech stack:* Scikit-learn, PyTorch, Streamlit
 
-###  **ASAPP**  
-**LLM-based Customer Service Assistant**  
-Prototype for a generative AI-powered chatbot trained to anticipate agent responses and suggest next actions using prompt-tuned transformer models.
+---
 
-###  **Dscvr.ai**  (WIP)
-**GenAI Writing Accelerator**  
-Award-winning hackathon project for an AI-powered research and writing assistant. Built with OpenAI and React, focused on workflow automation.
+### 🧬 BioSec – Biotech Security / Insider Threat Simulation  
+Inspired by real cybersecurity work. This project simulates internal access logs, using **LSTM-based anomaly detection** to flag credential misuse in bioinformatics systems.  
+*Tech stack:* TensorFlow (LSTM), PyCaret, OpenShift, AWS
 
-###  **EY**  
-**Urban Heat Island Prediction**  
-Spatial regression model using NYC land temperature and zoning data to predict urban heat islands, developed for EY's Data Challenge.
+---
 
-###  **NYBG**  
-**Botanical Image Classification**  
-Computer vision project from Kaggle x Break Through Tech AI x NY Botanical Garden competition. Trained CNNs on a large botanical species image set.
+### 🔐 AD (WIP) – Enterprise Anomaly Detection  
+A framework combining **supervised** and **unsupervised ensemble models** for cybersecurity event classification in enterprise infrastructure.  
+*Tech stack:* XGBoost, Isolation Forest, PyCaret
 
+---
 
+### 🤖 ASAPP – LLM-Based Customer Service Assistant  
+LLM-powered chatbot that predicts likely agent responses using **prompt-tuned transformers** and customer intent modeling.  
+*Tech stack:* HuggingFace Transformers, Prompt Engineering
 
-##  > Tools & Tech Stack
-- **ML/DL**: Scikit-learn, PyTorch, TensorFlow, PyCaret, XGBoost
-- **Data Eng.**: Apache Spark, Apache Airflow, BigQuery, GCP, AWS S3
-- **Cloud**: Google Cloud, Vertex AI, AWS, Docker, GitHub Actions
-- **Visualization**: Tableau, Streamlit, Pydeck, Matplotlib
-- **GenAI / NLP**: HuggingFace Transformers, OpenAI, LangChain
-- **Orchestration**: Airflow, Prefect, CI/CD workflows
+---
 
+### ✍️ Dscvr.ai – GenAI Writing Accelerator  
+🏆 *Hackathon Winner: Best UX & Most App Store Ready*  
+AI-powered research and writing assistant that automates synthesis and content generation.  
+*Tech stack:* OpenAI API, Next.js, Prompt Engineering
 
+---
 
-## > Contact
-Made by Bianca Yeseo Kim 
-*LinkedIn* ([https://linkedin.com/in/yeseobiancakim]) | *Portfolio* ([https://rummikub.github.io/portfolio])
+### 🌆 EY – Urban Heat Island Prediction  
+Predictive modeling of NYC urban heat zones using **spatial zoning**, **land temp data**, and regression modeling.  
+*Tech stack:* GeoPandas, Python, Tableau
+
+---
+
+### 🌱 NYBG – Botanical Species Image Classification  
+Computer vision challenge in collaboration with **Break Through Tech AI**, **Kaggle**, and **New York Botanical Garden**.  
+Trained CNNs on a large botanical image dataset.  
+*Tech stack:* PyTorch, TensorFlow, FastAI
+
+---
+
+## ⚙️ Tools & Tech Stack
+
+- **ML/DL**: Scikit-learn, PyCaret, PyTorch, TensorFlow, XGBoost, LightGBM, ONNX  
+- **GenAI/NLP**: HuggingFace, OpenAI, LangChain, BERT, DistilGPT2, RAG  
+- **Data Engineering**: Apache Spark, Airflow, BigQuery, GCP, AWS S3, Docker  
+- **Visualization**: Tableau, Pydeck, Streamlit, Matplotlib  
+- **Cloud & DevOps**: GCP, Vertex AI, AWS, RedHat OpenShift, GitHub Actions, CI/CD  
+
+---
+
+## 📫 Contact
+
+Made with ❤️ by **Bianca Yeseo Kim**  
+🔗 [LinkedIn](https://linkedin.com/in/yeseobiancakim) | 🌐 [Portfolio Website](https://rummikub.github.io/portfolio)
+
+---
+
+> ⚠️ **Disclaimer**: All datasets used are either synthetic or publicly available and are not derived from proprietary or sensitive sources.
