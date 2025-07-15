@@ -1,4 +1,4 @@
-# Bianca Yeseo Kim – MLSE Portfolio
+# DL/MLSE Portfolio
 
 Welcome! This portfolio showcases real-world projects across **machine learning**, **data engineering**, **computer vision**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
 
