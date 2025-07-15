@@ -1,5 +1,8 @@
 [Generative AI Models for Action Based Conversations collaborated with ASAPP]
 
+## Final Presentation Slides
+[Final Slides](docs/asapp_nlp_presentation.pdf)
+
 
 Goal :
 The team aimed to build a Large Language Model (LLM) to help customer service agents respond more effectively and increase productivity by creating a chatbot that can anticipate agent responses and suggest next steps, ultimately improving customer satisfaction and reducing operational errors.
