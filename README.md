@@ -10,40 +10,19 @@ Each project demonstrates applied experience in developing end-to-end solutions�
 
 ## Projects Overview
 
-### SmartStream – User Behavior Modeling Platform  
-A modular ML platform simulating user behavior across **entertainment**, **fitness**, **music**, and **ride-sharing** apps.  
-Features mood classification, churn modeling, trip prediction, and content recommendations.  
-*Tech stack:* Spark, Airflow, PyCaret, GCP, Tableau
-
-
-### PulseAI – Real-Time Behavioral Intelligence Engine  
-Streaming pipeline for **session modeling**, **churn detection**, and **real-time API delivery** across multiple digital services.  
-*Tech stack:* Spark Structured Streaming, Airflow, Streamlit
-
-
-### MobilityAI – Ridership Intelligence with NYC Taxi Data  
-Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore **surge pricing prediction** and **geo-temporal user behavior**.  
-*Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck
-
-
-### SyncFit – Fitness + Wearable Engagement Analytics  
-Churn modeling and engagement simulation using wearable fitness data. Recommender systems for class suggestions and personalized fitness routines.  
-*Tech stack:* Scikit-learn, PyTorch, Streamlit
-
-
-### BioSec – Biotech Security / Insider Threat Simulation  
-Inspired by real cybersecurity work. This project simulates internal access logs, using **LSTM-based anomaly detection** to flag credential misuse in bioinformatics systems.  
-*Tech stack:* TensorFlow (LSTM), PyCaret, OpenShift, AWS
-
 
 ### AD  – Enterprise Anomaly Detection  
 A framework combining **supervised** and **unsupervised ensemble models** for cybersecurity event classification in enterprise infrastructure.  
 *Tech stack:* XGBoost, Isolation Forest, PyCaret
 
-
 ### ASAPP – LLM-Based Customer Service Assistant  
 LLM-powered chatbot that predicts likely agent responses using **prompt-tuned transformers** and customer intent modeling.  
 *Tech stack:* HuggingFace Transformers, Prompt Engineering
+
+
+### BioSec – Biotech Security / Insider Threat Simulation  
+Inspired by real cybersecurity work. This project simulates internal access logs, using **LSTM-based anomaly detection** to flag credential misuse in bioinformatics systems.  
+*Tech stack:* TensorFlow (LSTM), PyCaret, OpenShift, AWS
 
 
 ### Dscvr.ai – GenAI Writing Accelerator  
@@ -57,10 +36,33 @@ Predictive modeling of NYC urban heat zones using **spatial zoning**, **land tem
 *Tech stack:* GeoPandas, Python, Tableau
 
 
+### MobilityAI – Ridership Intelligence with NYC Taxi Data  
+Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore **surge pricing prediction** and **geo-temporal user behavior**.  
+*Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck
+
+
 ### NYBG – Botanical Species Image Classification  
 Computer vision challenge in collaboration with **Break Through Tech AI**, **Kaggle**, and **New York Botanical Garden**.  
 Trained CNNs on a large botanical image dataset.  
 *Tech stack:* PyTorch, TensorFlow, FastAI
+
+
+### PulseAI – Real-Time Behavioral Intelligence Engine  
+Streaming pipeline for **session modeling**, **churn detection**, and **real-time API delivery** across multiple digital services.  
+*Tech stack:* Spark Structured Streaming, Airflow, Streamlit
+
+
+### SmartStream – User Behavior Modeling Platform  
+A modular ML platform simulating user behavior across **entertainment**, **fitness**, **music**, and **ride-sharing** apps.  
+Features mood classification, churn modeling, trip prediction, and content recommendations.  
+*Tech stack:* Spark, Airflow, PyCaret, GCP, Tableau
+
+
+### SyncFit – Fitness + Wearable Engagement Analytics  
+Churn modeling and engagement simulation using wearable fitness data. Recommender systems for class suggestions and personalized fitness routines.  
+*Tech stack:* Scikit-learn, PyTorch, Streamlit
+
+
 
 
 ## Tools & Tech Stack
