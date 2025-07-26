@@ -26,9 +26,9 @@ Trip prediction and demand clustering using real-world NYC TLC datasets. Built t
 *Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck
 
 
-### SyncFit – Fitness + Wearable Engagement Analytics  
-Churn modeling and engagement simulation using wearable fitness data. Recommender systems for class suggestions and personalized fitness routines.  
-*Tech stack:* Scikit-learn, PyTorch, Streamlit
+### SyncFit – Fitness + Wearable Simulation with Guardian Alert System  
+Chun analytics platform simulating wearable fitness logs, user dropout detection, and personalized class recommendations based on personalized fitness routines. With a real-time guardian alert systems that monitors behavioral deviations and escalates interventions:
+*Tech stack:* Scikit-learn, PyTorch, Streamlit, Open LLM
 
 
 ### BioSec – Biotech Security / Insider Threat Simulation  
