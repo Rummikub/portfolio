@@ -10,40 +10,41 @@ All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist an
 ## Projects Overview
 
 ### AD  – Enterprise Anomaly Detection  
-A framework combining **supervised** and **unsupervised ensemble models** for cybersecurity event classification in enterprise infrastructure.  
-*Tech stack:* XGBoost, Isolation Forest, PyCaret
+A framework combining supervised and unsupervised ensemble models for cybersecurity event classification in enterprise infrastructure.  
+*Tech stack:* XGBoost, Isolation Forest, PyCaret, LSTM, Keras, RNN 
 
 
 ### ASAPP – LLM-Based Customer Service Assistant  
-LLM-powered chatbot that predicts likely agent responses using **prompt-tuned transformers** and customer intent modeling.  
-*Tech stack:* HuggingFace Transformers, Prompt Engineering
+LLM-powered chatbot that predicts likely agent responses using prompt-tuned transformers and customer intent modeling.  
+*Tech stack:* HuggingFace Transformers, Prompt Engineering, NLP, BERT, distilGPT
 
 
 ### BioSec – Biotech Security / Insider Threat Simulation  
-Inspired by real cybersecurity work. This project simulates internal access logs, using **LSTM-based anomaly detection** to flag credential misuse in bioinformatics systems.  
+Inspired by real cybersecurity work. This project simulates internal access logs, using LSTM-based RNN anomaly detection model to flag credential misuse in bioinformatics systems.  
 *Tech stack:* TensorFlow (LSTM), PyCaret, OpenShift, AWS
 
 
 ### Dscvr.ai – GenAI Writing Accelerator  
 🏆 *Hackathon Winner: Best UX & Most App Store Ready*  
-AI-powered research and writing assistant that automates synthesis and content generation.  
+AI-powered research and writing assistant that automates synthesis, APA checker, autocomplete content generation
 *Tech stack:* OpenAI API, Next.js, Prompt Engineering
 
 
 ### EY – Urban Heat Island Prediction  
-Predictive modeling of NYC urban heat zones using **spatial zoning**, **land temp data**, and regression modeling.  
+*EY Open Science AI & Data Challenge*
+Predictive modeling of NYC urban heat zones using spatial zoning, land temp data, and regression modeling.  
 *Tech stack:* GeoPandas, Python, Tableau
 
 
 ### MobilityAI – Ridership Intelligence with NYC Taxi Data  
-Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore **surge pricing prediction** and **geo-temporal user behavior**.  
+Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore surge pricing prediction and geo-temporal user behavior.  
 *Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck
 
 
 ### NYBG – Botanical Species Image Classification  
-Computer vision challenge in collaboration with **Break Through Tech AI**, **Kaggle**, and **New York Botanical Garden**.  
-Trained CNNs on a large botanical image dataset.  
-*Tech stack:* PyTorch, TensorFlow, FastAI
+*Break Through Tech AI x Kaggle x New York Botanical Garden : ML Competition*
+Computer vision challenge for training CNNs on a large botanical image dataset.  
+*Tech stack:* PyTorch, TensorFlow, Big Data, GPU utilization
 
 
 ### SmartStream – User Behavior Modeling Platform  
@@ -53,18 +54,16 @@ A modular, multi-domain machine learning platform simulating real-world user beh
 
 ### SyncFit – Fitness + Wearable Engagement Analytics  
 Behavioral engagement and churn analytics platform simulating wearable fitness logs, user dropout detection, and personalized class recommendations. Now includes a real-time guardian alert system that monitors behavioral deviations and escalates interventions.
-*Tech stack:* Scikit-learn, PyTorch, Streamlit, LLM
-
+*Tech stack:* Scikit-learn, PyTorch, Streamlit, OpenAI API
 
 
 ## Tools & Tech Stack
 
-- **ML/DL**: Scikit-learn, PyCaret, PyTorch, TensorFlow, XGBoost, LightGBM, ONNX  
-- **GenAI/NLP**: HuggingFace, OpenAI, LangChain, BERT, DistilGPT2, RAG  
-- **Data Engineering**: Apache Spark, Airflow, BigQuery, GCP, AWS S3, Docker  
+- **ML/DL**: Scikit-learn, PyCaret, PyTorch, TensorFlow, XGBoost, FastAI, Joblib  
+- **GenAI/NLP**: HuggingFace Transformers, OpenAI API, Prompt Engineering, BERT  
+- **Data Engineering**: Apache Spark, Apache Airflow, BigQuery, AWS S3, Pandas, NumPy  
 - **Visualization**: Tableau, Pydeck, Streamlit, Matplotlib  
-- **Cloud & DevOps**: GCP, Vertex AI, AWS, RedHat OpenShift, GitHub Actions, CI/CD  
-
+- **Cloud & DevOps**: AWS, RedHat OpenShift, GitHub Actions, CI/CD  
 
 ## Contact
 
