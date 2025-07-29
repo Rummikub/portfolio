@@ -15,7 +15,7 @@ A framework combining supervised and unsupervised ensemble models for cybersecur
 
 
 ### ASAPP – LLM-Based Customer Service Assistant  
-LLM-powered chatbot that predicts likely agent responses using prompt-tuned transformers and customer intent modeling.  
+LLM-powered chatbot that predicts likely agent responses using prompt-tuned transformers and customer intent modeling.
 *Tech stack:* HuggingFace Transformers, Prompt Engineering, NLP, BERT, distilGPT
 
 
