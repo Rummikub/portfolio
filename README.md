@@ -1,6 +1,6 @@
 # DL/MLSE Portfolio
 
-Welcome! This portfolio showcases real-world projects across **machine learning**, **data engineering**, **computer vision**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
+This portfolio showcases real-world projects across **machine learning**, **data engineering**, **computer vision**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
 
 Each project demonstrates applied experience in developing end-to-end solutions—ranging from model development to deployment and data orchestration.
 
@@ -47,8 +47,8 @@ Trained CNNs on a large botanical image dataset.
 
 
 ### SmartStream – User Behavior Modeling Platform  
-Modular analytics and ML pipelines simulating user behavior across entertainment, fitness, music, and ride-sharing platforms. Includes mood classification, trip prediction, churn modeling, and content recommendations
-*Tech stack:* Spark, Airflow, PyCaret, GCP, Tableau
+A modular, multi-domain machine learning platform simulating real-world user behavior across entertainment, fitness, music, and ride-sharing. It supports classification, regression, and recommender use cases — all connected through a clean pipeline structure and optional Tableau dashboarding.
+*Tech stack:* Pandas, Scikit-learn, Streamlit, Apache Airflow, Joblib, Tableau
 
 
 ### SyncFit – Fitness + Wearable Engagement Analytics  
