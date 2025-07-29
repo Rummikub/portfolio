@@ -9,7 +9,7 @@ All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist an
 
 ## Projects Overview
 
-### AD  – Enterprise Anomaly Detection  
+### AD  – Supervised Enterprise Anomaly Detection + Unsupervised Insider Threat Prediction
 A framework combining supervised and unsupervised ensemble models for cybersecurity event classification in enterprise infrastructure.  
 *Tech stack:* XGBoost, Isolation Forest, PyCaret, LSTM, Keras, RNN 
 
