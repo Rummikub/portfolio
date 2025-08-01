@@ -15,7 +15,9 @@ Inspired by real cybersecurity work. This project simulates internal access logs
 🏆 *Hackathon Winner: Best UX & Most App Store Ready*  <br>AI-powered research and writing assistant that automates synthesis, APA checker, autocomplete content generation<br><br>*Tech stack:* OpenAI API, Next.js, Prompt Engineering<br><br><br>
 
 ### EY – Urban Heat Island Prediction  <br>
-*EY Open Science AI & Data Challenge*<br>Predictive modeling of NYC urban heat zones using spatial zoning, land temp data, and regression modeling.  <br><br>*Tech stack:* GeoPandas, Python, Tableau<br><br><br>### MobilityAI – Ridership Intelligence with NYC Taxi Data  <br>Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore surge pricing prediction and geo-temporal user behavior.  <br><br>*Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck<br><br><br>
+*EY Open Science AI & Data Challenge*<br>Predictive modeling of NYC urban heat zones using spatial zoning, land temp data, and regression modeling.  <br><br>*Tech stack:* GeoPandas, Python, Tableau<br><br><br>
+
+### MobilityAI – Ridership Intelligence with NYC Taxi Data  <br>Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore surge pricing prediction and geo-temporal user behavior.  <br><br>*Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck<br><br><br>
 
 ### NYBG – Botanical Species Image Classification  <br>
 *Break Through Tech AI x Kaggle x New York Botanical Garden : ML Competition*<br>Computer vision challenge for training CNNs on a large botanical image dataset.  <br><br>*Tech stack:* PyTorch, TensorFlow, Big Data, GPU utilization<br><br><br>
@@ -26,7 +28,8 @@ A modular, multi-domain machine learning platform simulating real-world user beh
 ### SyncFit – Fitness + Wearable Engagement Analytics  <br>
 Behavioral engagement and churn analytics platform simulating wearable fitness logs, user dropout detection, and personalized class recommendations. Now includes a real-time guardian alert system that monitors behavioral deviations and escalates interventions.<br><br>*Tech stack:* Scikit-learn, PyTorch, Streamlit, OpenAI API<br><br><br>
 
-## Tools & Tech Stack<br><br>- **ML/DL**: Scikit-learn, PyCaret, PyTorch, TensorFlow, XGBoost, FastAI, Joblib  <br>- **GenAI/NLP**: HuggingFace Transformers, OpenAI API, Prompt Engineering, BERT  <br>- **Data Engineering**: Apache Spark, Apache Airflow, BigQuery, AWS S3, Pandas, NumPy  <br>- **Visualization**: Tableau, Pydeck, Streamlit, Matplotlib  <br>- **Cloud & DevOps**: AWS, RedHat OpenShift, GitHub Actions, CI/CD  <br><br>## Contact<br><br>Made by **Bianca Yeseo Kim**  <br>🔗 [LinkedIn](https://linkedin.com/in/yeseobiancakim) | 🌐 [Portfolio Website](https://rummikub.github.io/portfolio)<br><br><br>> ⚠️ **Disclaimer**: All datasets used are either synthetic or publicly available and are not derived from proprietary or sensitive sources.<br>
+## Tools & Tech Stack<br><br>
+-**ML/DL**: Scikit-learn, PyCaret, PyTorch, TensorFlow, XGBoost, FastAI, Joblib  <br>- **GenAI/NLP**: HuggingFace Transformers, OpenAI API, Prompt Engineering, BERT  <br>- **Data Engineering**: Apache Spark, Apache Airflow, BigQuery, AWS S3, Pandas, NumPy  <br>- **Visualization**: Tableau, Pydeck, Streamlit, Matplotlib  <br>- **Cloud & DevOps**: AWS, RedHat OpenShift, GitHub Actions, CI/CD  <br><br>## Contact<br><br>Made by **Bianca Yeseo Kim**  <br>🔗 [LinkedIn](https://linkedin.com/in/yeseobiancakim) | 🌐 [Portfolio Website](https://rummikub.github.io/portfolio)<br><br><br>> ⚠️ **Disclaimer**: All datasets used are either synthetic or publicly available and are not derived from proprietary or sensitive sources.<br>
 
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=rummikub&theme=nightowl&hide_border=false&include_all_commits=false&count_private=false)<br/>
