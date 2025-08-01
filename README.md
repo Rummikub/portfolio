@@ -1,14 +1,12 @@
 # DL/MLSE Portfolio<br>
 
-# 📊 Stats:
+#### 📊 Stats:
 ![](https://github-readme-stats.vercel.app/api?username=rummikub&theme=nightowl&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=rummikub&theme=nightowl&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rummikub&theme=nightowl&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=rummikub&icon=0&color=0)](https://visitcount.itsvg.in)
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
 <br>This portfolio showcases real-world projects across **machine learning**, **data engineering**, **computer vision**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.<br><br>Each project demonstrates applied experience in developing end-to-end solutions—ranging from model development to deployment and data orchestration.<br><br>All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist and ML Engineer based in NYC.<br><br><br>
 
