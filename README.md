@@ -40,9 +40,9 @@ Behavioral engagement and churn analytics platform simulating wearable fitness l
 - **ML/DL**: Scikit-learn, PyCaret, PyTorch, TensorFlow, XGBoost, FastAI, Joblib  <br>- **GenAI/NLP**: HuggingFace Transformers, OpenAI API, Prompt Engineering, BERT  <br>- **Data Engineering**: Apache Spark, Apache Airflow, BigQuery, AWS S3, Pandas, NumPy  <br>- **Visualization**: Tableau, Pydeck, Streamlit, Matplotlib
 -  **Cloud & DevOps**: AWS, RedHat OpenShift, GitHub Actions, CI/CD
 
- ## Contact
-<br><br>🔗 [LinkedIn](https://linkedin.com/in/yeseobiancakim) 
-<br><br>🌐 [Portfolio Website](https://rummikub.github.io/portfolio)
+## Contact
+<br>🔗 [LinkedIn](https://linkedin.com/in/yeseobiancakim) 
+<br>🌐 [Portfolio Website](https://rummikub.github.io/portfolio)
 
 **Disclaimer**: All datasets used are either synthetic or publicly available and are not derived from proprietary or sensitive sources.<br>
 
