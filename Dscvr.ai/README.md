@@ -1,6 +1,11 @@
 ## Demo Slides
 [Final Presentation Slides](docs/DscvrAI.pdf)
 
+## Feature by NYC Hackathon : 🏆 Best UX/UI Design & Most App Store Ready 
+
+https://hackathon.cornell.edu/ai/ai-teams-2025
+
+
 ## Getting Started
 
 First, run the development server:
