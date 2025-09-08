@@ -1,7 +1,7 @@
 ## Demo Slides
 [Final Presentation Slides](docs/DscvrAI.pdf)
 
-## Feature by NYC Hackathon : 🏆 Best UX/UI Design & Most App Store Ready 
+## AI Hackathon Winner : 🏆 Best UX/UI Design & Most App Store Ready 
 
 https://hackathon.cornell.edu/ai/ai-teams-2025
 
