@@ -19,11 +19,6 @@ LLM-powered chatbot that predicts likely agent responses using **prompt-tuned tr
 *Tech stack:* HuggingFace Transformers, Prompt Engineering
 
 
-### BioSec – Biotech Security / Insider Threat Simulation  
-Inspired by real cybersecurity work. This project simulates internal access logs, using **LSTM-based anomaly detection** to flag credential misuse in bioinformatics systems.  
-*Tech stack:* TensorFlow (LSTM), PyCaret, OpenShift, AWS
-
-
 ### Dscvr.ai – GenAI Writing Accelerator  
 🏆 *Hackathon Winner: Best UX & Most App Store Ready*  
 AI-powered research and writing assistant that automates synthesis and content generation.  
@@ -35,9 +30,10 @@ Predictive modeling of NYC urban heat zones using **spatial zoning**, **land tem
 *Tech stack:* GeoPandas, Python, Tableau
 
 
-###MobilityAI – Ridership Intelligence with NYC Taxi Data
+### MobilityAI – Ridership Intelligence with NYC Taxi Data
 Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore surge pricing prediction and geo-temporal user behavior.
-Tech stack: Pandas, GeoPandas, Scikit-learn, Pydeck
+*Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck
+
 
 ### NYBG – Botanical Species Image Classification  
 Computer vision challenge in collaboration with **Break Through Tech AI**, **Kaggle**, and **New York Botanical Garden**.  
@@ -50,9 +46,9 @@ Behavioral engagement and churn analytics platform simulating wearable fitness l
 *Tech stack:* Scikit-learn, PyTorch, Streamlit, LLM
 
 
-### Velocity - Agentic AI for Startup Founders : Zero-to-One
+### Velocity - Agentic AI for Startup Founders: Zero-to-One
 
-AI-powered go-to-market acceleration platform that automates customer discovery, validation, and sales execution. Comresses 6 months of manual research and outreach into 6 days through intelligent prospect identification, personalized campaign generation, and systematic assumption testing with synthetic personas.
+AI-powered go-to-market acceleration platform that automates customer discovery, validation, and sales execution. Compresses 6 months of manual research and outreach into 6 days through intelligent prospect identification, personalized campaign generation, and systematic assumption testing with synthetic personas.
 *Tech stack:* React, TypeScript, Flask, Python, MongoDB, ScaleStack.ai, Claude Sonnet, LangGraph, Anthropic API
 
 ## Tools & Tech Stack
