@@ -12,7 +12,7 @@ Product Demo
      style="width: 100%; max-width: 600px; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
    >
    <p style="text-align: center; margin-top: 1rem; color: #2563eb;">
-     >> Click to watch full demo video
+      Click to watch full demo video
    </p>
  </div>
 
