@@ -35,6 +35,10 @@ Predictive modeling of NYC urban heat zones using **spatial zoning**, **land tem
 *Tech stack:* GeoPandas, Python, Tableau
 
 
+###MobilityAI – Ridership Intelligence with NYC Taxi Data
+Trip prediction and demand clustering using real-world NYC TLC datasets. Built to explore surge pricing prediction and geo-temporal user behavior.
+Tech stack: Pandas, GeoPandas, Scikit-learn, Pydeck
+
 ### NYBG – Botanical Species Image Classification  
 Computer vision challenge in collaboration with **Break Through Tech AI**, **Kaggle**, and **New York Botanical Garden**.  
 Trained CNNs on a large botanical image dataset.  
