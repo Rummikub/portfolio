@@ -47,7 +47,7 @@ Behavioral engagement and churn analytics platform simulating wearable fitness l
 
 
 ### Velocity - Agentic AI for Startup Founders: Zero-to-One
-🏆 *Forum x Anthropic Agentic AI Hackathon Final List w/ $1500 Claude Credits*
+🏆 *Forum x Anthropic Agentic AI Hackathon Final List w/ $1500 Claude Credits*      
 AI-powered go-to-market acceleration platform that automates customer discovery, validation, and sales execution. Compresses 6 months of manual research and outreach into 6 days through intelligent prospect identification, personalized campaign generation, and systematic assumption testing with synthetic personas.
 *Tech stack:* React, TypeScript, Flask, Python, MongoDB, ScaleStack.ai, Claude Sonnet, LangGraph, Anthropic API
 
