@@ -4,17 +4,7 @@ Forum x Anthropic Hackathon 2025 - Building Agentic AI from Zero to One
 # Demo Video
 
 Product Demo
-<div class="demo-preview">
-  <img 
-    src="./assets/demo.gif" 
-    alt="Product Demo" 
-    onclick="openVideoModal('demo-modal')"
-    style="width: 100%; max-width: 600px; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
-  >
-  <p style="text-align: center; margin-top: 1rem; color: #2563eb;">
-    Click to watch full demo video
-  </p>
-</div>
+[Product Demo Video](assets/demo.mp4)
 
 AI workflows
 <div class="demo-preview">
