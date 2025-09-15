@@ -4,7 +4,7 @@ Forum x Anthropic Hackathon 2025 - Building Agentic AI from Zero to One
 # Demo Video
 
 Product Demo
-[![Demo Video]]([Go to Demo Video](https://www.loom.com/share/9ff8072b732c45ee9c889d5277eb3370?sid=3908aafb-2ebf-411b-b680-f4a6b66ad9e7)
+[Go to Demo Video](https://www.loom.com/share/9ff8072b732c45ee9c889d5277eb3370?sid=3908aafb-2ebf-411b-b680-f4a6b66ad9e7)
 
 AI workflows
 <div class="demo-preview">
