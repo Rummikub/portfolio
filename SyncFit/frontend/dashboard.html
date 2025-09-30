@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncFit - Real-Time Health Monitoring Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --storyblok-dark: #0a2540;
+            --storyblok-primary: #00b3b0;
+            --storyblok-secondary: #1b3a52;
+            --storyblok-accent: #00e5e2;
+            --storyblok-light: #f0f9ff;
+            --storyblok-gradient: linear-gradient(135deg, #0a2540 0%, #1b3a52 100%);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a2540 0%, #1b3a52 50%, #0a2540 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 179, 176, 0.3);
+            border-color: var(--storyblok-primary);
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 179, 176, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 179, 176, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 179, 176, 0); }
+        }
+        
+        .alert-flash {
+            animation: flash 1s infinite;
+        }
+        
+        @keyframes flash {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #00b3b0 0%, #00e5e2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-gradient {
+            background: linear-gradient(90deg, #0a2540 0%, #1b3a52 50%, #0a2540 100%);
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 179, 176, 0.2);
+        }
+        
+        .chart-container {
+            background: rgba(10, 37, 64, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 179, 176, 0.3);
+        }
+        
+        .table-container {
+            background: rgba(10, 37, 64, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #00b3b0 0%, #00e5e2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 179, 176, 0.4);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 37, 64, 0.3);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--storyblok-primary);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--storyblok-accent);
+        }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col">
+    <!-- Header -->
+    <nav class="nav-gradient shadow-2xl sticky top-0 z-50 border-b border-cyan-900/30">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="relative">
+                        <i class="fas fa-heartbeat text-3xl mr-3 gradient-text"></i>
+                        <span class="absolute -top-1 -right-1 flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-xl text-white">SyncFit</span>
+                        <span class="text-sm text-cyan-300 ml-2">AI-Powered Health Monitoring</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <button onclick="refreshData()" class="text-cyan-300 hover:text-cyan-100 transition-colors">
+                        <i class="fas fa-sync-alt mr-2"></i>Refresh
+                    </button>
+                    <div class="flex items-center glass-effect px-3 py-1 rounded-full">
+                        <span class="text-sm text-cyan-100 mr-2">Live</span>
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Emergency Alert Banner -->
+    <div id="emergencyBanner" class="hidden bg-red-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-exclamation-triangle text-2xl mr-3 alert-flash"></i>
+                    <div>
+                        <p class="font-bold">EMERGENCY ALERTS ACTIVE</p>
+                        <p class="text-sm" id="emergencyCount">0 users require immediate intervention</p>
+                    </div>
+                </div>
+                <button onclick="showEmergencyModal()" class="bg-white text-red-600 px-4 py-2 rounded-md font-semibold hover:bg-red-50">
+                    View Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="max-w-7xl mx-auto px-4 py-4 flex-1 overflow-y-auto">
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <!-- Total Users -->
+            <div class="metric-card rounded-xl p-4 card-hover">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-cyan-300 uppercase tracking-wider">Total Users</p>
+                        <p class="text-3xl font-bold text-white mt-1" id="totalUsers">100</p>
+                        <p class="text-xs text-cyan-400 mt-2">
+                            <i class="fas fa-arrow-up text-xs"></i> Active monitoring
+                        </p>
+                    </div>
+                    <div class="glass-effect p-3 rounded-xl">
+                        <i class="fas fa-users text-cyan-400 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Alerts -->
+            <div class="metric-card rounded-xl p-4 card-hover">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-cyan-300 uppercase tracking-wider">Active Alerts</p>
+                        <p class="text-3xl font-bold gradient-text mt-1" id="activeAlerts">23</p>
+                        <p class="text-xs text-orange-400 mt-2">
+                            <i class="fas fa-bell text-xs"></i> Requires attention
+                        </p>
+                    </div>
+                    <div class="glass-effect p-3 rounded-xl">
+                        <i class="fas fa-exclamation-circle text-orange-400 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High Risk Users -->
+            <div class="metric-card rounded-xl p-4 card-hover">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-cyan-300 uppercase tracking-wider">High Risk</p>
+                        <p class="text-3xl font-bold text-red-400 mt-1" id="highRisk">11</p>
+                        <p class="text-xs text-red-400 mt-2">
+                            <i class="fas fa-chart-line text-xs"></i> ML Prediction
+                        </p>
+                    </div>
+                    <div class="glass-effect p-3 rounded-xl pulse-dot">
+                        <i class="fas fa-user-times text-red-400 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interventions -->
+            <div class="metric-card rounded-xl p-4 card-hover">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-cyan-300 uppercase tracking-wider">Interventions</p>
+                        <p class="text-3xl font-bold text-green-400 mt-1" id="interventions">7</p>
+                        <p class="text-xs text-green-400 mt-2">
+                            <i class="fas fa-check-circle text-xs"></i> Triggered today
+                        </p>
+                    </div>
+                    <div class="glass-effect p-3 rounded-xl">
+                        <i class="fas fa-hand-holding-medical text-green-400 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <!-- Activity Trends Chart -->
+            <div class="chart-container rounded-xl p-4">
+                <h3 class="text-sm font-semibold text-cyan-100 mb-4 uppercase tracking-wider">
+                    <i class="fas fa-chart-area gradient-text mr-2 text-sm"></i>
+                    Activity Trends (7 Days)
+                </h3>
+                <div style="height: 200px; position: relative;">
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Risk Distribution -->
+            <div class="chart-container rounded-xl p-4">
+                <h3 class="text-sm font-semibold text-cyan-100 mb-4 uppercase tracking-wider">
+                    <i class="fas fa-chart-pie gradient-text mr-2 text-sm"></i>
+                    Risk Distribution
+                </h3>
+                <div style="height: 200px; position: relative;">
+                    <canvas id="riskChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert List -->
+        <div class="table-container rounded-xl">
+            <div class="px-4 py-3 border-b border-cyan-900/30">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-sm font-semibold text-cyan-100 uppercase tracking-wider">
+                        <i class="fas fa-bell gradient-text mr-2 text-sm"></i>
+                        Recent Alerts
+                    </h3>
+                    <div class="flex space-x-2">
+                        <button onclick="filterAlerts('all')" class="px-3 py-1 text-xs glass-effect text-cyan-300 rounded-lg hover:text-white transition-colors">All</button>
+                        <button onclick="filterAlerts('emergency')" class="px-3 py-1 text-xs glass-effect text-red-400 rounded-lg hover:text-red-300 transition-colors">Emergency</button>
+                        <button onclick="filterAlerts('high')" class="px-3 py-1 text-xs glass-effect text-orange-400 rounded-lg hover:text-orange-300 transition-colors">High</button>
+                        <button onclick="filterAlerts('medium')" class="px-3 py-1 text-xs glass-effect text-yellow-400 rounded-lg hover:text-yellow-300 transition-colors">Medium</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="border-b border-cyan-900/30">
+                        <tr>
+                            <th class="px-3 py-3 text-left text-xs font-medium text-cyan-400 uppercase tracking-wider">User</th>
+                            <th class="px-3 py-3 text-left text-xs font-medium text-cyan-400 uppercase tracking-wider">Severity</th>
+                            <th class="px-3 py-3 text-left text-xs font-medium text-cyan-400 uppercase tracking-wider">Alert</th>
+                            <th class="px-3 py-3 text-left text-xs font-medium text-cyan-400 uppercase tracking-wider">Inactive</th>
+                            <th class="px-3 py-3 text-left text-xs font-medium text-cyan-400 uppercase tracking-wider">Risk</th>
+                            <th class="px-3 py-3 text-left text-xs font-medium text-cyan-400 uppercase tracking-wider">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alertsTable" class="divide-y divide-cyan-900/20">
+                        <!-- Alerts will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- User Details Modal (Hidden by default) -->
+        <div id="userModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+            <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
+                <div class="mt-3">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900" id="modalTitle">User Health Details</h3>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modalContent">
+                        <!-- User details will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="nav-gradient text-cyan-300 py-3 border-t border-cyan-900/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs">SyncFit Health Monitoring System | Powered by ML & Storyblok</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

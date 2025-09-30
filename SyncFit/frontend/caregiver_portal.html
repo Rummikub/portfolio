@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncFit Caregiver Portal - Your Loved Ones Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            color: #667eea;
+            font-size: 1.8rem;
+        }
+
+        .logo .badge {
+            background: #f56565;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #667eea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .welcome-message {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .welcome-message h2 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-message p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+
+        .alert-banner {
+            background: linear-gradient(135deg, #f56565 0%, #ed64a6 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        .alert-banner .icon {
+            font-size: 2rem;
+        }
+
+        .alert-banner .content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .patient-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .patient-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .patient-card.critical {
+            border-left: 5px solid #f56565;
+        }
+
+        .patient-card.high {
+            border-left: 5px solid #ed8936;
+        }
+
+        .patient-card.moderate {
+            border-left: 5px solid #ecc94b;
+        }
+
+        .patient-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .patient-info h3 {
+            color: #2d3748;
+            margin-bottom: 0.25rem;
+        }
+
+        .patient-info .relationship {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .severity-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .severity-badge.critical {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .severity-badge.high {
+            background: #fed7aa;
+            color: #c05621;
+        }
+
+        .severity-badge.moderate {
+            background: #fef5cd;
+            color: #b7791f;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .metric .label {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 0.25rem;
+        }
+
+        .alert-message {
+            background: #fef5e7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .alert-message h4 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .alert-message p {
+            color: #4a5568;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .actions {
+            margin-top: 1rem;
+        }
+
+        .actions h4 {
+            color: #2d3748;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .action-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .action-list li {
+            padding: 0.5rem 0;
+            color: #4a5568;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .action-list li:before {
+            content: "→";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .btn-emergency {
+            background: #f56565;
+            color: white;
+        }
+
+        .btn-emergency:hover {
+            background: #e53e3e;
+            transform: translateY(-2px);
+        }
+
+        .resources {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .resources h2 {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            padding: 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .resource-card:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2);
+        }
+
+        .resource-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .resource-card p {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .emergency-contacts {
+            background: #fff5f5;
+            border: 2px solid #feb2b2;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .emergency-contacts h3 {
+            color: #c53030;
+            margin-bottom: 1rem;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .contact-availability {
+            font-size: 0.85rem;
+            color: #718096;
+        }
+
+        .contact-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>SyncFit Caregiver Portal</h1>
+            <span class="badge">LIVE</span>
+        </div>
+        <div class="user-info">
+            <span>Welcome, Emily</span>
+            <div class="user-avatar">E</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Welcome Message -->
+        <div class="welcome-message">
+            <h2>Hello Emily, here's your loved ones' status</h2>
+            <p>We're monitoring your family members 24/7 to ensure their safety and wellbeing.</p>
+        </div>
+
+        <!-- Critical Alert Banner -->
+        <div class="alert-banner" id="criticalAlert">
+            <div class="icon">🚨</div>
+            <div class="content">
+                <h3>URGENT: Sarah Wilson needs immediate attention</h3>
+                <p>No activity detected for 96 hours. This is a critical situation requiring immediate action.</p>
+            </div>
+        </div>
+
+        <!-- Patient Cards Grid -->
+        <div class="dashboard-grid">
+            <!-- Sarah Wilson - Critical -->
+            <div class="patient-card critical">
+                <div class="patient-header">
+                    <div class="patient-info">
+                        <h3>Sarah Wilson</h3>
+                        <span class="relationship">Your Mother</span>
+                    </div>
+                    <span class="severity-badge critical">Critical</span>
+                </div>
+                
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="value">96h</div>
+                        <div class="label">Inactive</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">89%</div>
+                        <div class="label">Activity Drop</div>
+                    </div>
+                </div>
+
+                <div class="alert-message">
+                    <h4>Immediate Action Required</h4>
+                    <p>Sarah hasn't shown any activity for 4 days. This is a critical situation that requires your immediate attention.</p>
+                </div>
+
+                <div class="actions">
+                    <h4>What you need to do right now:</h4>
+                    <ul class="action-list">
+                        <li>Call Sarah immediately - if no answer, go to her location</li>
+                        <li>Check if she has fallen or needs emergency medical attention</li>
+                        <li>Call 911 if you cannot reach her</li>
+                        <li>Contact her primary care physician</li>
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn btn-emergency" onclick="call911()">Call 911</button>
+                    <button class="btn btn-primary" onclick="callPatient('Sarah')">Call Sarah</button>
+                </div>
+            </div>
+
+            <!-- John Martinez - High -->
+            <div class="patient-card high">
+                <div class="patient-header">
+                    <div class="patient-info">
+                        <h3>John Martinez</h3>
+                        <span class="relationship">Your Father</span>
+                    </div>
+                    <span class="severity-badge high">High Priority</span>
+                </div>
+                
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="value">48h</div>
+                        <div class="label">Inactive</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">65%</div>
+                        <div class="label">Activity Drop</div>
+                    </div>
+                </div>
+
+                <div class="alert-message">
+                    <h4>Attention Needed Today</h4>
+                    <p>John's activity has significantly decreased. He needs your attention today to prevent potential issues.</p>
+                </div>
+
+                <div class="actions">
+                    <h4>Recommended actions:</h4>
+                    <ul class="action-list">
+                        <li>Call John to check on his wellbeing</li>
+                        <li>Visit him within the next 2 hours if no answer</li>
+                        <li>Review his medications</li>
+                        <li>Schedule a telehealth appointment</li>
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="callPatient('John')">Call John</button>
+                    <button class="btn btn-secondary" onclick="scheduleVisit('John')">Schedule Visit</button>
+                </div>
+            </div>
+
+            <!-- Mary Johnson - Moderate -->
+            <div class="patient-card moderate">
+                <div class="patient-header">
+                    <div class="patient-info">
+                        <h3>Mary Johnson</h3>
+                        <span class="relationship">Your Aunt</span>
+                    </div>
+                    <span class="severity-badge moderate">Moderate</span>
+                </div>
+                
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="value">24h</div>
+                        <div class="label">Inactive</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">45%</div>
+                        <div class="label">Activity Drop</div>
+                    </div>
+                </div>
+
+                <div class="alert-message">
+                    <h4>Monitor Closely</h4>
+                    <p>Mary's activity has decreased moderately. A check-in would be helpful to ensure she's doing well.</p>
+                </div>
+
+                <div class="actions">
+                    <h4>Suggested actions:</h4>
+                    <ul class="action-list">
+                        <li>Give Mary a friendly call</li>
+                        <li>Ask if she needs help with groceries</li>
+                        <li>Encourage light exercise</li>
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="callPatient('Mary')">Call Mary</button>
+                    <button class="btn btn-secondary" onclick="sendMessage('Mary')">Send Message</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Contacts -->
+        <div class="emergency-contacts">
+            <h3>🚨 Emergency Contacts</h3>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <div class="contact-info">
+                        <span class="contact-name">Emergency Services</span>
+                        <span class="contact-availability">24/7 Available</span>
+                    </div>
+                    <span class="contact-number">911</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info">
+                        <span class="contact-name">24/7 Nurse Hotline</span>
+                        <span class="contact-availability">Always Available</span>
+                    </div>
+                    <span class="contact-number">555-0199</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info">
+                        <span class="contact-name">Dr. Smith (Primary Care)</span>
+                        <span class="contact-availability">Mon-Fri 8am-5pm</span>
+                    </div>
+                    <span class="contact-number">555-0100</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info">
+                        <span class="contact-name">SyncFit Support</span>
+                        <span class="contact-availability">24/7 Support</span>
+                    </div>
+                    <span class="contact-number">555-0150</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="resources">
+            <h2>Helpful Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-card" onclick="openResource('emergency-guide')">
+                    <h3>📋 Emergency Response Guide</h3>
+                    <p>Step-by-step instructions for handling health emergencies</p>
+                </div>
+                <div class="resource-card" onclick="openResource('activity-monitoring')">
+                    <h3>📊 Understanding Activity Patterns</h3>
+                    <p>Learn what activity changes mean for elderly health</p>
+                </div>
+                <div class="resource-card" onclick="openResource('medication-management')">
+                    <h3>💊 Medication Management</h3>
+                    <p>Tips for helping your loved ones manage their medications</p>
+                </div>
+                <div class="resource-card" onclick="openResource('support-community')">
+                    <h3>👥 Caregiver Community</h3>
+                    <p>Connect with other family caregivers for support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 SyncFit - AI-Powered Caregiver Communication Platform</p>
+        <p>Powered by Storyblok CMS | Your loved ones' safety is our priority</p>
+    </footer>
+
+    <script>
+        // Simulated functions for demo
+        function call911() {
+            alert('🚨 Connecting to Emergency Services...\n\nIn a real system, this would:\n1. Call 911 immediately\n2. Send patient location\n3. Notify all emergency contacts\n4. Log the emergency event');
+        }
+
+        function callPatient(name) {
+            alert(`📞 Calling ${name}...\n\nIn a real system, this would:\n1. Initiate a phone call\n2. Log the call attempt\n3. Track response status\n4. Update activity records`);
+        }
+
+        function scheduleVisit(name) {
+            alert(`📅 Scheduling visit to ${name}...\n\nIn a real system, this would:\n1. Open calendar integration\n2. Suggest optimal visit times\n3. Send reminders\n4. Coordinate with other caregivers`);
+        }
+
+        function sendMessage(name) {
+            alert(`💬 Sending message to ${name}...\n\nIn a real system, this would:\n1. Send SMS/WhatsApp message\n2. Track delivery status\n3. Monitor for response\n4. Escalate if no reply`);
+        }
+
+        function openResource(resource) {
+            alert(`📚 Opening ${resource}...\n\nThis would load content from Storyblok CMS with:\n1. Detailed guides\n2. Video tutorials\n3. Downloadable PDFs\n4. Interactive checklists`);
+        }
+
+        // Simulate real-time updates
+        setInterval(() => {
+            // In production, this would fetch from Storyblok API
+            console.log('Checking for new alerts from Storyblok...');
+        }, 30000); // Check every 30 seconds
+
+        // Simulate webhook notification
+        setTimeout(() => {
+            console.log('Webhook received: New critical alert for patient');
+        }, 5000);
+    </script>
+</body>
+</html>

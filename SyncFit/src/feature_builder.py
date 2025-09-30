@@ -15,7 +15,8 @@ def build_user_features(path="data/synthetic_wearable_logs.csv"):
     user_df.columns = ['_'.join(col) for col in user_df.columns]
     user_df = user_df.reset_index()
 
-    X = user_df.drop(columns=['churned_max'])
+    # Drop both user_id and the target column
+    X = user_df.drop(columns=['user_id', 'churned_max'])
     y = user_df['churned_max']
 
     return X, y

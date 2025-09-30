@@ -3,7 +3,7 @@ import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 import joblib
-from feature_builder import build_user_features
+from .feature_builder import build_user_features
 
 def train_churn_model():
     X, y = build_user_features()
