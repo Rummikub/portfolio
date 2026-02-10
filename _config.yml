@@ -28,6 +28,3 @@ navigation:
     url: "#tools--tech-stack"
   - title: "Contact"
     url: "#contact"
-
-include:
-   - assets/css/custom.css
