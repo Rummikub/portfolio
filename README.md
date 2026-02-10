@@ -1,10 +1,10 @@
-# DS/ML Portfolio
+## DS/ML Portfolio
 
-This portfolio showcases real-world projects across **machine learning**, **data engineering**, **computer vision**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
+This portfolio showcases real-world projects across **machine learning**, **data engineering**, **cybersecurity**, and **generative AI**. These projects are built with **production-level practices**, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
 
 Each project demonstrates applied experience in developing end-to-end solutions—ranging from model development to deployment and data orchestration.
 
-All code and pipelines were created by **Bianca Yeseo Kim**, a Data Scientist and ML Engineer based in NYC.
+All code and pipelines were created by Bianca Kim, a Data Scientist and ML Engineer based in NYC.
 
 ## Projects Overview
 
@@ -41,7 +41,9 @@ Trained CNNs on a large botanical image dataset.
 
 
 ### SyncFit – Fitness + Wearable Engagement Analytics  
-Behavioral engagement and churn analytics platform simulating wearable fitness logs, user dropout detection, and personalized class recommendations. Now includes a real-time guardian alert system that monitors behavioral deviations and escalates interventions.    
+Behavioral engagement and churn analytics platform simulating wearable fitness logs, user dropout detection, and personalized class recommendations. 
+
+Now includes a real-time guardian alert system that monitors behavioral deviations and escalates interventions.    
 *Tech stack:* Scikit-learn, PyTorch, Streamlit, LLM
 
 
