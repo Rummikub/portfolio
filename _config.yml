@@ -1,4 +1,4 @@
-title: Bianca Kim
+title: Bianca Yeseo Kim
 description: >
   Data Scientist & ML Engineer <br>
   Focus on AI/ML, Data Engineering <br>
@@ -7,7 +7,7 @@ description: >
 theme: jekyll-theme-minimal
 show_downloads: false
 
-logo: /assets/img/headshot.jpg
+logo: /assets/img/headshot_circular.png
 plugins:
   - jekyll-feed
   - jekyll-sitemap
