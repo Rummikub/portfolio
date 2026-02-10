@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9c33f72f-0bb8-4ab0-bca7-6d48c2ecaf1b" />## Data Scientist
+## Data Scientist
 
 This portfolio showcases real-world projects across machine learning, data engineering, cybersecurity, and NLP. These projects are built with production-level practices, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
 
