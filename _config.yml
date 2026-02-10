@@ -7,26 +7,23 @@
 title: Bianca Yeseo Kim
 description: >
   Data Scientist & ML Engineer
-  Specializing in AI/ML, Computer Vision, and Data Engineering
-  Based in NYC 
+  Focus on AI/ML, NLP, and Data Engineering
+  Based in New York City
 
 # Enhanced GitHub Pages configuration
 theme: jekyll-theme-minimal
+color_scheme: dark
+show_downloads: false
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
 # Custom styling and features
-show_downloads: false
-google_analytics: # Add your GA tracking ID if you have one
-
+google_analytics: ""
 # Social links
 linkedin_url: "https://linkedin.com/in/yeseobiancakim"
 github_url: "https://github.com/rummikub"
-
-# Custom colors (you can override these in assets/css/style.scss)
-color_scheme: dark # or light
 
 # Navigation
 navigation:
