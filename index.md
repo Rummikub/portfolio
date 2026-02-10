@@ -1,8 +1,4 @@
----
-layout: default
----
-
-## DS+ML Portfolio
+## Data Specialist
 
 This portfolio showcases real-world projects across machine learning, data engineering, cybersecurity, and NLP. These projects are built with production-level practices, using public or synthetic datasets to simulate real-world behavior while protecting sensitive data.
 
