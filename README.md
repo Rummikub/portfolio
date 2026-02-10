@@ -11,8 +11,8 @@ A framework combining supervised and unsupervised models for cybersecurity event
 
 
 ### ASAPP – LLM-Based Customer Service Assistant  
-LLM-powered chatbot that predicts likely agent responses using prompt-tuned transformers and customer intent modeling.<br>
-*Tech stack:* HuggingFace Transformers, Prompt Engineering
+LLM-powered chatbot that predicts likely agent responses using prompt-tuned transformers and customer intent modeling.
+<br>*Tech stack:* HuggingFace Transformers, Prompt Engineering
 
 
 ### Dscvr.ai – GenAI Writing Accelerator  
@@ -22,8 +22,8 @@ AI-powered research and writing assistant that automates synthesis and content g
 
 
 ### EY – Urban Heat Island Prediction  
-Predictive modeling of NYC urban heat zones using spatial zoning, land temperature data, and regression modeling.<br>
-*Tech stack:* GeoPandas, Python, Tableau
+Predictive modeling of NYC urban heat zones using spatial zoning, land temperature data, and regression modeling.
+<br>*Tech stack:* GeoPandas, Python, Tableau
 
 
 ### MobilityAI – Ridership Intelligence with NYC Taxi Data
@@ -33,8 +33,8 @@ Trip prediction and demand clustering using real-world NYC TLC datasets. Built t
 
 ### NYBG – Botanical Species Image Classification  
 Computer vision challenge in collaboration with Break Through Tech AI, Kaggle and New York Botanical Garden.<br>
-Trained CNNs on a large botanical image dataset.    
-*Tech stack:* PyTorch, TensorFlow, FastAI
+Trained CNNs on a large botanical image dataset.
+<br>*Tech stack:* PyTorch, TensorFlow, FastAI
 
 
 ### SyncFit – Fitness + Wearable Engagement Analytics  
