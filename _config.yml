@@ -1,4 +1,3 @@
-logo: /assets/img/headshot.jpg
 title: Bianca Kim
 description: >
   Data Scientist & ML Engineer <br>
@@ -7,8 +6,9 @@ description: >
 
 # Enhanced GitHub Pages configuration
 theme: jekyll-theme-minimal
-color_scheme: dark
 show_downloads: false
+
+logo: /assets/img/headshot.jpg
 plugins:
   - jekyll-feed
   - jekyll-sitemap
