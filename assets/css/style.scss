@@ -39,21 +39,26 @@ a:hover {
    =============================== */
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /* LEFT column (header / yml content) */
-header {
-  width: 28%;
+.wrapper > header {
+  float: left !important;
+  width: 22% !important;          /* 👈 NARROW LEFT */
+  max-width: 260px;
   padding-right: 2rem;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* RIGHT column (README content) */
-section {
-  width: 72%;
+/* RIGHT CONTENT (README) */
+.wrapper > section {
+  float: right !important;
+  width: 76% !important;          /* 👈 WIDE RIGHT */
+  max-width: none;
+  padding-left: 3rem;
 }
-
 /* ===============================
    Header styling
    =============================== */
@@ -77,6 +82,31 @@ header a {
   display: inline-block;
   margin-top: 0.5rem;
   font-weight: 500;
+}
+
+/* ===============================
+   Profile image (sidebar)
+   =============================== */
+
+.profile-img {
+  display: block;
+  width: 120px;
+  height: 120px;
+
+  margin: 0 auto 1.5rem;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid rgba(78, 161, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(78, 161, 255, 0.35);
 }
 
 /* ===============================
