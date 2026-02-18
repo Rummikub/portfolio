@@ -18,7 +18,7 @@ Enterprise security systems generate massive event logs with very few labeled th
 Anomaly detection under uncertainty, ensemble modeling, feature engineering, operational trade-off analysis<br>      
 *Tech stack:* XGBoost, Isolation Forest, PyCaret
 
-[View Repo - Anomaly Detection](https://github.com/Rummikub/portfolio/tree/main/AD/supervised/anomaly_detection)
+[View Repo - Anomaly Detection](https://github.com/Rummikub/portfolio/tree/main/AD/supervised/anomaly_detection) <br>
 [View Repo - Insider Threat](https://github.com/Rummikub/portfolio/tree/main/AD/unsupervised/insider_threat/src)
 
 
