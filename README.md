@@ -18,6 +18,9 @@ Enterprise security systems generate massive event logs with very few labeled th
 Anomaly detection under uncertainty, ensemble modeling, feature engineering, operational trade-off analysis<br>      
 *Tech stack:* XGBoost, Isolation Forest, PyCaret
 
+[View Repo - Anomaly Detection](https://github.com/Rummikub/portfolio/tree/main/AD/supervised/anomaly_detection)
+[View Repo - Insider Threat](https://github.com/Rummikub/portfolio/tree/main/AD/unsupervised/insider_threat/src)
+
 
 ### ASAPP – LLM-Based Customer Service Assistant  
 LLM-powered chatbot that predicts likely agent responses using prompt-tuned transformers and customer intent modeling to solve CS teams facing inconsistent response quality and high response latency across high-volume logs
@@ -31,6 +34,8 @@ LLM-powered chatbot that predicts likely agent responses using prompt-tuned tran
 **Skills Demonstrated**  
 LLM evaluation, intent modeling, prompt engineering with control mechanisms<br><br>
 *Tech stack:* HuggingFace Transformers, Prompt Engineering
+
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/ASAPP)
 
 
 ### Dscvr.ai – GenAI Writing Accelerator  
@@ -47,6 +52,7 @@ AI-powered research and writing assistant that automates synthesis and content g
 Applied generative AI system design, structured prompt architecture, UX-aware ML integration<br>   
 *Tech stack:* OpenAI API, Next.js, Prompt Engineering
 
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/Dscvr.ai)
 
 ### EY – Urban Heat Island Prediction  
 Urban heat patterns are influenced by spatial zoning, land use, and environmental variables that interact non-linearly.
@@ -61,6 +67,7 @@ Urban heat patterns are influenced by spatial zoning, land use, and environmenta
 Spatial feature engineering, regression modeling, bias-variance trade-off analysis  <br><br>
 *Tech stack:* GeoPandas, Python, Tableau
 
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/EY)
 
 ### MobilityAI – Ridership Intelligence with NYC Taxi Data
 Taxi demand fluctuates across geography and time, affecting pricing strategy and operational planning.
@@ -75,6 +82,7 @@ Taxi demand fluctuates across geography and time, affecting pricing strategy and
 Time-series aggregation, clustering, demand modeling, business signal extraction.<br>    
 *Tech stack:* Pandas, GeoPandas, Scikit-learn, Pydeck 
 
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/MobilityAI)
 
 ### NYBG – Botanical Species Image Classification  
 Accurately classifying plant species from images with high intra-class similarity and class imbalance.
@@ -90,6 +98,8 @@ Computer vision modeling, transfer learning, performance evaluation, model itera
 <br>*Tech stack:* PyTorch, TensorFlow, FastAI
 
 
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/NYBG)
+
 ### SyncFit – Fitness + Wearable Engagement Analytics  
 User dropout and engagement decline in fitness platforms reduce retention and subscription revenue.
 
@@ -103,6 +113,7 @@ User dropout and engagement decline in fitness platforms reduce retention and su
 Behavioral feature engineering, churn modeling, intervention analytics.<br><br>
 *Tech stack:* Scikit-learn, PyTorch, Streamlit, LLM
 
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/SyncFit)
 
 ### Velocity - Agentic AI for Startup Founders: Zero-to-One
 🏆 *Forum x Anthropic Agentic AI Hackathon: Finalist Awarded with $1500 Claude Credits*      
@@ -117,6 +128,8 @@ Early-stage founders spend months validating assumptions and identifying custome
 **Skills Demonstrated**  
 Agentic system design, workflow automation, generative AI orchestration.<br>     
 *Tech stack:* React, TypeScript, Flask, Python, MongoDB, ScaleStack.ai, Claude Sonnet, LangGraph, Anthropic API
+
+[View Repo →](https://github.com/Rummikub/portfolio/tree/main/Velocity)
 
 ## Tools & Tech Stack
 
