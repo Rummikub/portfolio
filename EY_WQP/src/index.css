@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 8%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 8%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 168 80% 46%;
+    --primary-foreground: 220 20% 4%;
+
+    --secondary: 200 80% 55%;
+    --secondary-foreground: 220 20% 4%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 168 40% 15%;
+    --accent-foreground: 168 80% 70%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 16%;
+    --input: 220 15% 16%;
+    --ring: 168 80% 46%;
+
+    --radius: 0.5rem;
+
+    --water-deep: 210 70% 20%;
+    --water-mid: 200 80% 55%;
+    --water-light: 168 80% 46%;
+    --water-surface: 168 30% 12%;
+    --nature: 162 63% 41%;
+    --nature-light: 162 30% 15%;
+    --warning: 38 92% 50%;
+    --danger: 0 72% 51%;
+
+    --glow-primary: 168 80% 46%;
+    --glow-secondary: 200 80% 55%;
+
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 168 80% 46%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 15% 16%;
+    --sidebar-ring: 168 80% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(168 80% 46% / 0.15), 0 0 60px hsl(168 80% 46% / 0.05);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 30px hsl(168 80% 46% / 0.4);
+  }
+
+  .border-glow {
+    border-color: hsl(168 80% 46% / 0.3);
+  }
+
+  .grid-dots {
+    background-image: radial-gradient(circle, hsl(168 80% 46% / 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(168 80% 46% / 0.02) 2px,
+      hsl(168 80% 46% / 0.02) 4px
+    );
+  }
+}
